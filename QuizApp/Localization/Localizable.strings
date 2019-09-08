@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  QuizApp
+
+  Created by Tarun Kumar on 9/7/19.
+  Copyright © 2019 Tarun Kumar. All rights reserved.
+*/
+
+//Login
+"login.google" = "Sign in with Google";
+"login.facebook" = "Sign in with Facebook";
+
+//Downloads
+"title.downloads" = "Downloads";
+
+//Explore
+"title.explore" = "Explore";
+
+//Learn
+"title.learn" = "Learn";
+
+//Profile
+"title.profile" = "Profile";
+
+//Recommended
+"title.recommended" = "Recommended";
