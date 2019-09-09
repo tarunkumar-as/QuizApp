@@ -29,6 +29,7 @@
 		8D2DD39823237C9400A3F866 /* UIViewConstraintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DD39723237C9400A3F866 /* UIViewConstraintManager.swift */; };
 		8D2DD39A2323874D00A3F866 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DD3992323874D00A3F866 /* ExploreTableViewCell.swift */; };
 		8D86D32623241310009A0BC2 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D86D32523241310009A0BC2 /* ExploreCollectionViewCell.swift */; };
+		8DAC41B923260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC41B823260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		8D2DD39723237C9400A3F866 /* UIViewConstraintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintManager.swift; sourceTree = "<group>"; };
 		8D2DD3992323874D00A3F866 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		8D86D32523241310009A0BC2 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DAC41B823260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHeadCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8D2DD35C2321E8C000A3F866 /* ExploreViewController.swift */,
+				8DAC41B823260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift */,
 				8D86D32523241310009A0BC2 /* ExploreCollectionViewCell.swift */,
 				8D2DD3992323874D00A3F866 /* ExploreTableViewCell.swift */,
 			);
@@ -296,6 +299,7 @@
 				8D2DD39A2323874D00A3F866 /* ExploreTableViewCell.swift in Sources */,
 				8D2DD3612321E8E100A3F866 /* LearnViewController.swift in Sources */,
 				8D2DD3852323117F00A3F866 /* DefaultTheme.swift in Sources */,
+				8DAC41B923260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift in Sources */,
 				8D2DD35F2321E8D100A3F866 /* ProfileViewController.swift in Sources */,
 				8D2DD3632321E8E900A3F866 /* DownloadsViewController.swift in Sources */,
 				8D2DD38B2323134F00A3F866 /* Constants.swift in Sources */,

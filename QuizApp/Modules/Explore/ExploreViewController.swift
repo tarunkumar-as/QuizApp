@@ -34,13 +34,14 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView?.translatesAutoresizingMaskIntoConstraints = false
         tableView?.delegate = self
         tableView?.dataSource = self
-        tableView?.rowHeight = 150
+        tableView?.rowHeight = 250
+        tableView?.separatorStyle = UITableViewCell.SeparatorStyle.none
         view.addSubview(tableView!)
         
-        tableView?.setTopAnchor(anchor: view.safeAreaLayoutGuide.topAnchor)
-        tableView?.setLeftAnchor(anchor: view.safeAreaLayoutGuide.leftAnchor)
-        tableView?.setRightAnchor(anchor: view.safeAreaLayoutGuide.rightAnchor)
-        tableView?.setBottomAnchor(anchor: view.safeAreaLayoutGuide.bottomAnchor)
+        tableView?.setTopAnchorRelativeTo(anchor: view.safeAreaLayoutGuide.topAnchor)
+        tableView?.setLeftAnchorRelativeTo(anchor: view.safeAreaLayoutGuide.leftAnchor)
+        tableView?.setRightAnchorRelativeTo(anchor: view.safeAreaLayoutGuide.rightAnchor)
+        tableView?.setBottomAnchorRelativeTo(anchor: view.safeAreaLayoutGuide.bottomAnchor)
     }
     
     //MARK: UITableView Delegate Methods
