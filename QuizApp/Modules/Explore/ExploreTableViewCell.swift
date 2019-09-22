@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol ExploreTableViewDelegate: class {
+    func courseSelected(index: Int)
+}
+
 class ExploreTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    weak var delegate: ExploreTableViewDelegate?
     
     private var collectionView: UICollectionView?
     private var _layout: UICollectionViewFlowLayout?
@@ -77,7 +83,9 @@ class ExploreTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Pressed")
+        if (indexPath.item != 0) {
+            delegate?.courseSelected(index: indexPath.item)
+        }
     }
     
     //MARK: UICollectionViewDelegateFlowLayout Methods

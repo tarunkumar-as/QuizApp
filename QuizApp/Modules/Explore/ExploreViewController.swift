@@ -8,15 +8,34 @@
 
 import UIKit
 
-class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExploreTableViewDelegate {
     
+    private lazy var coursesModel: CoursesModel = {
+        let model = CoursesModel()
+        return model
+    }()
     private var tableView: UITableView?
+    private lazy var questionViewController: QuestionViewController = {
+        let viewController = QuestionViewController()
+        return viewController
+    }()
+    
+    private var questionsContent: [[String : Any]] = []
+    
+    //MARK: ViewController Related Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerViewControllerForThemeAndFontChange()
         initialzeViewController()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDataFromModel()
+    }
+    
+    //MARK: View Customization
     
     private func initialzeViewController() {
         customizeNavigationBar()
@@ -55,10 +74,25 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var tableViewCell = tableView.dequeueReusableCell(withIdentifier: "ExploreTableViewCell")
+        var tableViewCell = tableView.dequeueReusableCell(withIdentifier: "ExploreTableViewCell") as? ExploreTableViewCell
         if tableViewCell == nil {
             tableViewCell = ExploreTableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "ExploreTableViewCell")
         }
+        tableViewCell?.delegate = self
         return tableViewCell!
+    }
+    
+    //MARK: ExploreTableViewDelegate Methods
+    
+    func courseSelected(index: Int) {
+        questionViewController.hidesBottomBarWhenPushed = true
+        questionViewController.setQuestionsData(questionNumber: 0, questionsSet: questionsContent)
+        navigationController?.pushViewController(questionViewController, animated: true)
+    }
+    
+    //MARK: Model Related Methods
+    
+    private func fetchDataFromModel() {
+        questionsContent = coursesModel.getCoursesList()
     }
 }

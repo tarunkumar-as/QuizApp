@@ -29,6 +29,12 @@
 		8D2DD39823237C9400A3F866 /* UIViewConstraintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DD39723237C9400A3F866 /* UIViewConstraintManager.swift */; };
 		8D2DD39A2323874D00A3F866 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DD3992323874D00A3F866 /* ExploreTableViewCell.swift */; };
 		8D86D32623241310009A0BC2 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D86D32523241310009A0BC2 /* ExploreCollectionViewCell.swift */; };
+		8DA3F59C2336CAFA004CBF3A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3F59B2336CAFA004CBF3A /* AppConstants.swift */; };
+		8DA3F59F2336DD51004CBF3A /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DA3F59E2336DD50004CBF3A /* Questions.json */; };
+		8DA3F5A623370923004CBF3A /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3F5A523370923004CBF3A /* CoursesModel.swift */; };
+		8DA3F5AC23370E9B004CBF3A /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3F5AB23370E9B004CBF3A /* FileReader.swift */; };
+		8DA7B550233095830016D995 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7B54F233095830016D995 /* QuestionViewController.swift */; };
+		8DA7B5532330A0050016D995 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7B5522330A0050016D995 /* OptionsView.swift */; };
 		8DAC41B923260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC41B823260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +63,12 @@
 		8D2DD39723237C9400A3F866 /* UIViewConstraintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintManager.swift; sourceTree = "<group>"; };
 		8D2DD3992323874D00A3F866 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		8D86D32523241310009A0BC2 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DA3F59B2336CAFA004CBF3A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		8DA3F59E2336DD50004CBF3A /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
+		8DA3F5A523370923004CBF3A /* CoursesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesModel.swift; sourceTree = "<group>"; };
+		8DA3F5AB23370E9B004CBF3A /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		8DA7B54F233095830016D995 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		8DA7B5522330A0050016D995 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		8DAC41B823260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHeadCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,12 +105,16 @@
 				8D2DD37F23230E4600A3F866 /* Themes & Fonts */,
 				8D2DD38F2323178E00A3F866 /* AppUserDefaults */,
 				8D2DD38C232314F600A3F866 /* Utils */,
+				8DA3F59D2336CB08004CBF3A /* App Constants */,
 				8D2DD3662321E90800A3F866 /* AppDelegate */,
 				8D2DD3672321E91A00A3F866 /* Modules */,
+				8DA3F5AA23370D80004CBF3A /* Model */,
+				8DA3F5A02336DD5F004CBF3A /* Resources */,
 				8D2DD3942323713800A3F866 /* Localization */,
 				8D2DD34D2321B9CF00A3F866 /* Assets.xcassets */,
 				8D2DD34F2321B9CF00A3F866 /* LaunchScreen.storyboard */,
 				8D2DD3522321B9CF00A3F866 /* Info.plist */,
+				8DA3F5AB23370E9B004CBF3A /* FileReader.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -121,6 +137,7 @@
 				8D2DD36A2321E93400A3F866 /* Learn */,
 				8D2DD3692321E92E00A3F866 /* Profile */,
 				8D2DD36C2321E94200A3F866 /* Recomended */,
+				8DA7B55123309FEE0016D995 /* Question */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -222,6 +239,39 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		8DA3F59D2336CB08004CBF3A /* App Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3F59B2336CAFA004CBF3A /* AppConstants.swift */,
+			);
+			path = "App Constants";
+			sourceTree = "<group>";
+		};
+		8DA3F5A02336DD5F004CBF3A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3F59E2336DD50004CBF3A /* Questions.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8DA3F5AA23370D80004CBF3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3F5A523370923004CBF3A /* CoursesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DA7B55123309FEE0016D995 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				8DA7B54F233095830016D995 /* QuestionViewController.swift */,
+				8DA7B5522330A0050016D995 /* OptionsView.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2DD3512321B9CF00A3F866 /* LaunchScreen.storyboard in Resources */,
+				8DA3F59F2336DD51004CBF3A /* Questions.json in Resources */,
 				8D2DD3932323712F00A3F866 /* Localizable.strings in Resources */,
 				8D2DD34E2321B9CF00A3F866 /* Assets.xcassets in Resources */,
 			);
@@ -295,7 +346,10 @@
 			files = (
 				8D2DD3892323119900A3F866 /* DefaultFont.swift in Sources */,
 				8D2DD3812323115A00A3F866 /* FontManager.swift in Sources */,
+				8DA7B550233095830016D995 /* QuestionViewController.swift in Sources */,
+				8DA3F5A623370923004CBF3A /* CoursesModel.swift in Sources */,
 				8D2DD37E23230E2B00A3F866 /* ThemeManager.swift in Sources */,
+				8DA3F59C2336CAFA004CBF3A /* AppConstants.swift in Sources */,
 				8D2DD39A2323874D00A3F866 /* ExploreTableViewCell.swift in Sources */,
 				8D2DD3612321E8E100A3F866 /* LearnViewController.swift in Sources */,
 				8D2DD3852323117F00A3F866 /* DefaultTheme.swift in Sources */,
@@ -309,8 +363,10 @@
 				8D2DD35D2321E8C000A3F866 /* ExploreViewController.swift in Sources */,
 				8D2DD3652321E8F400A3F866 /* RecommendedViewController.swift in Sources */,
 				8D2DD39823237C9400A3F866 /* UIViewConstraintManager.swift in Sources */,
+				8DA3F5AC23370E9B004CBF3A /* FileReader.swift in Sources */,
 				8D2DD38E2323178A00A3F866 /* UserDefaults.swift in Sources */,
 				8D2DD396232375BE00A3F866 /* GlobalUtils.swift in Sources */,
+				8DA7B5532330A0050016D995 /* OptionsView.swift in Sources */,
 				8D2DD3472321B9CE00A3F866 /* AppDelegate.swift in Sources */,
 				8D86D32623241310009A0BC2 /* ExploreCollectionViewCell.swift in Sources */,
 			);
