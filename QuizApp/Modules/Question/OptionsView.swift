@@ -10,7 +10,7 @@ import UIKit
 
 class OptionsView: UIView {
     
-    private var solutionViews: [UIView]?
+    private var solutionViews: [UIButton]?
     private var solutionLabels: [UILabel]?
     
     required init?(coder aDecoder: NSCoder) {
@@ -19,7 +19,7 @@ class OptionsView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        solutionViews = [UIView]()
+        solutionViews = [UIButton]()
         solutionLabels = [UILabel]()
         customizeView()
     }
@@ -30,8 +30,9 @@ class OptionsView: UIView {
     }
     
     private func addBackgroundViews() {
-        for _ in 0...3 {
+        for i in 0...3 {
             let view = createBackgroundView()
+            view.tag = i
             self.addSubview(view)
             solutionViews?.append(view)
             
@@ -41,8 +42,8 @@ class OptionsView: UIView {
         }
     }
     
-    private func createBackgroundView() -> UIView {
-        let backgroundView = UIView()
+    private func createBackgroundView() -> UIButton {
+        let backgroundView = UIButton(type: UIButton.ButtonType.custom)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         backgroundView.backgroundColor = UIColor.white
         backgroundView.layer.cornerRadius = 3
@@ -77,6 +78,10 @@ class OptionsView: UIView {
             solutionLabels![i].setRightAnchor(offset: -10)
             solutionLabels![i].setBottomAnchor(offset: -15)
         }
+    }
+    
+    @objc private func buttonPressed(_ button: UIButton) {
+        
     }
     
     public func setViewValues(solutionStrings: [String]) {
