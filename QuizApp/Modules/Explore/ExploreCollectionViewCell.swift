@@ -49,7 +49,8 @@ class ExploreCollectionViewCell: UICollectionViewCell {
         if cellImageView == nil {
             cellImageView = UIImageView()
             cellImageView?.translatesAutoresizingMaskIntoConstraints = false
-            cellImageView?.contentMode = UIView.ContentMode.scaleAspectFit
+            cellImageView?.contentMode = UIView.ContentMode.scaleAspectFill
+            cellImageView?.clipsToBounds = true
             contentView.addSubview(cellImageView!)
         }
     }
