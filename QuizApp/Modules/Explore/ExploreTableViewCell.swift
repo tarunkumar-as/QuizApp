@@ -26,6 +26,10 @@ class ExploreTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         return _layout!
     }
     
+    private var sectionTitle: String = ""
+    private var sectionColor: UIColor = UIColor.black
+    private var sectionData: [[String : Any]] = []
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -33,6 +37,13 @@ class ExploreTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addCellViews()
+    }
+    
+    public func populateDate(sectionColor: UIColor, sectionTitle: String, sectionData: [[String : Any]]) {
+        self.sectionTitle = sectionTitle
+        self.sectionColor = sectionColor
+        self.sectionData = sectionData
+        collectionView?.reloadData()
     }
     
     private func addCellViews() {
@@ -66,18 +77,22 @@ class ExploreTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return sectionData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (indexPath.item == 0) {
             let cell: ExploreHeadCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreHeadCell", for: indexPath) as! ExploreHeadCollectionViewCell
-            cell.updateCellView(cellColor: UIColor.orange, cellTitle: "Degrees")
+            cell.updateCellView(cellColor: sectionColor, cellTitle: sectionTitle)
             return cell
         }
         else {
             let cell: ExploreCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExploreCollectionViewCell", for: indexPath) as! ExploreCollectionViewCell
-            cell.updateCellView(cellImage: UIImage(named: "NEU")!, cellTitle: "Computer Science", cellSubtitle: "Northeastern University")
+            let cellData = sectionData[indexPath.item]
+            let cellImage = UIImage(named: cellData[AppConstants.Courses_Response_Key.COURSE.rawValue] as! String)
+            let cellTitle = cellData[AppConstants.Courses_Response_Key.COURSE.rawValue] as? String
+            let cellSubtitle = cellData[AppConstants.Courses_Response_Key.SECTION.rawValue] as? String
+            cell.updateCellView(cellImage: cellImage, cellTitle: cellTitle, cellSubtitle: cellSubtitle)
             return cell
         }
     }

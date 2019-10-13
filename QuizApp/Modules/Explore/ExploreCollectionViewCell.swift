@@ -91,7 +91,7 @@ class ExploreCollectionViewCell: UICollectionViewCell {
         cellSubtitleLabel?.setRightAnchor(offset: -7)
     }
     
-    public func updateCellView(cellImage: UIImage, cellTitle: String, cellSubtitle: String) {
+    public func updateCellView(cellImage: UIImage?, cellTitle: String?, cellSubtitle: String?) {
         cellImageView?.image = cellImage
         cellTitleLabel?.text = cellTitle
         cellSubtitleLabel?.text = cellSubtitle

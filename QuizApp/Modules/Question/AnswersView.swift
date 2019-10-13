@@ -8,10 +8,15 @@
 
 import UIKit
 
-class OptionsView: UIView {
+protocol AnswerProtocol: class {
+    func answerSelected(answerNumber: Int)
+}
+
+class AnswersView: UIView {
     
     private var solutionViews: [UIButton]?
     private var solutionLabels: [UILabel]?
+    private weak var answersDelegate: AnswerProtocol?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -43,21 +48,22 @@ class OptionsView: UIView {
     }
     
     private func createBackgroundView() -> UIButton {
-        let backgroundView = UIButton(type: UIButton.ButtonType.custom)
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        backgroundView.backgroundColor = UIColor.white
-        backgroundView.layer.cornerRadius = 3
-        backgroundView.layer.shadowColor = UIColor.lightGray.cgColor
-        backgroundView.layer.shadowOpacity = 1
-        backgroundView.layer.shadowOffset = CGSize.init(width: 0, height: 1)
-        backgroundView.layer.shadowRadius = 1
-        return backgroundView
+        let answerButton = UIButton(type: UIButton.ButtonType.custom)
+        answerButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControl.Event.touchUpInside)
+        answerButton.translatesAutoresizingMaskIntoConstraints = false
+        answerButton.backgroundColor = UIColor.white
+        answerButton.layer.cornerRadius = 3
+        answerButton.layer.shadowColor = UIColor.lightGray.cgColor
+        answerButton.layer.shadowOpacity = 1
+        answerButton.layer.shadowOffset = CGSize.init(width: 0, height: 1)
+        answerButton.layer.shadowRadius = 1
+        return answerButton
     }
     
     private func createSolutionLabel() -> UILabel {
         let solutionLabel = UILabel()
         solutionLabel.translatesAutoresizingMaskIntoConstraints = false
-        solutionLabel.backgroundColor = UIColor.white
+        solutionLabel.backgroundColor = UIColor.clear
         solutionLabel.textColor = UIColor.black
         return solutionLabel
     }
@@ -81,7 +87,13 @@ class OptionsView: UIView {
     }
     
     @objc private func buttonPressed(_ button: UIButton) {
-        
+        for i in 0...3 {
+            solutionViews![i].backgroundColor = UIColor.white
+            solutionLabels![i].textColor = UIColor.black
+        }
+        solutionViews![button.tag].backgroundColor = UIColor.init(redInt: 15, greenInt: 33, blueInt: 144, alpha: 1.0)
+        solutionLabels![button.tag].textColor = UIColor.white
+        answersDelegate?.answerSelected(answerNumber: button.tag)
     }
     
     public func setViewValues(solutionStrings: [String]) {

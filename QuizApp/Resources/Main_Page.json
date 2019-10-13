@@ -1,0 +1,425 @@
+[
+  {
+    "Primary_Index": 1,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 1,
+    "Course": "Java",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 2,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 2,
+    "Course": "Python",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 3,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 3,
+    "Course": "R",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 4,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 4,
+    "Course": "C",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 5,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 5,
+    "Course": "C++",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 6,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 6,
+    "Course": "C#",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 7,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 7,
+    "Course": "Go ",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 8,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 8,
+    "Course": "Angular",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 9,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 9,
+    "Course": "Javascript",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 10,
+    "Categorie_Id": 1,
+    "Categorie": "Programming and Development",
+    "Course_Id": 10,
+    "Course": "React",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 11,
+    "Categorie_Id": 2,
+    "Categorie": "Database",
+    "Course_Id": 1,
+    "Course": "Microsoft Sql Server",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 12,
+    "Categorie_Id": 2,
+    "Categorie": "Database",
+    "Course_Id": 2,
+    "Course": "MYSQL",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 13,
+    "Categorie_Id": 2,
+    "Categorie": "Database",
+    "Course_Id": 3,
+    "Course": "Oracle",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 14,
+    "Categorie_Id": 2,
+    "Categorie": "Database",
+    "Course_Id": 4,
+    "Course": "Postgre sql ",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 15,
+    "Categorie_Id": 2,
+    "Categorie": "Database",
+    "Course_Id": 5,
+    "Course": "Azure",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 16,
+    "Categorie_Id": 2,
+    "Categorie": "Database",
+    "Course_Id": 6,
+    "Course": "Apache Kafka",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 17,
+    "Categorie_Id": 2,
+    "Categorie": "Database",
+    "Course_Id": 7,
+    "Course": "MongoDB",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 18,
+    "Categorie_Id": 3,
+    "Categorie": "DATA & ANALYTICS  ",
+    "Course_Id": 1,
+    "Course": "Tableau",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 19,
+    "Categorie_Id": 3,
+    "Categorie": "DATA & ANALYTICS  ",
+    "Course_Id": 2,
+    "Course": "Power BI",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 20,
+    "Categorie_Id": 3,
+    "Categorie": "DATA & ANALYTICS  ",
+    "Course_Id": 3,
+    "Course": "Qlik sense",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 21,
+    "Categorie_Id": 3,
+    "Categorie": "DATA & ANALYTICS  ",
+    "Course_Id": 4,
+    "Course": "Excel",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 22,
+    "Categorie_Id": 3,
+    "Categorie": "DATA & ANALYTICS  ",
+    "Course_Id": 5,
+    "Course": "Google Analytics",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 23,
+    "Categorie_Id": 4,
+    "Categorie": "Chemistry ",
+    "Course_Id": 1,
+    "Course": "Organic ",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 24,
+    "Categorie_Id": 4,
+    "Categorie": "Chemistry ",
+    "Course_Id": 2,
+    "Course": "Inorganic",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 25,
+    "Categorie_Id": 4,
+    "Categorie": "Chemistry ",
+    "Course_Id": 3,
+    "Course": "Polymers",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 26,
+    "Categorie_Id": 5,
+    "Categorie": "Physics",
+    "Course_Id": 1,
+    "Course": "Kinematics",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 27,
+    "Categorie_Id": 5,
+    "Categorie": "Physics",
+    "Course_Id": 2,
+    "Course": "Energy and Momentum ",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 28,
+    "Categorie_Id": 5,
+    "Categorie": "Physics",
+    "Course_Id": 3,
+    "Course": "Quantum Physcis",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 29,
+    "Categorie_Id": 6,
+    "Categorie": "Biology ",
+    "Course_Id": 1,
+    "Course": "Molecular Biology",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 30,
+    "Categorie_Id": 6,
+    "Categorie": "Biology ",
+    "Course_Id": 2,
+    "Course": "Cell Biology",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 31,
+    "Categorie_Id": 6,
+    "Categorie": "Biology ",
+    "Course_Id": 3,
+    "Course": "Cancer Biology ",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 32,
+    "Categorie_Id": 7,
+    "Categorie": "Maths",
+    "Course_Id": 1,
+    "Course": "Calculus",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 33,
+    "Categorie_Id": 7,
+    "Categorie": "Maths",
+    "Course_Id": 2,
+    "Course": "Probability and statistics",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 34,
+    "Categorie_Id": 8,
+    "Categorie": "Economics",
+    "Course_Id": 1,
+    "Course": "Microeconomics",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 35,
+    "Categorie_Id": 8,
+    "Categorie": "Economics",
+    "Course_Id": 2,
+    "Course": "Macroeconomics",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 36,
+    "Categorie_Id": 9,
+    "Categorie": "Testing",
+    "Course_Id": 1,
+    "Course": "Selenium",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 37,
+    "Categorie_Id": 9,
+    "Categorie": "Testing",
+    "Course_Id": 2,
+    "Course": "API Testing",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 38,
+    "Categorie_Id": 9,
+    "Categorie": "Testing",
+    "Course_Id": 3,
+    "Course": "Automation Testing",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 39,
+    "Categorie_Id": 10,
+    "Categorie": "Mobile Development",
+    "Course_Id": 1,
+    "Course": "Flutter",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 40,
+    "Categorie_Id": 10,
+    "Categorie": "Mobile Development",
+    "Course_Id": 2,
+    "Course": "Swift",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 41,
+    "Categorie_Id": 10,
+    "Categorie": "Mobile Development",
+    "Course_Id": 3,
+    "Course": "Android ",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 42,
+    "Categorie_Id": 10,
+    "Categorie": "Mobile Development",
+    "Course_Id": 4,
+    "Course": "IOS",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 43,
+    "Categorie_Id": 11,
+    "Categorie": "AL/ML  ",
+    "Course_Id": 1,
+    "Course": "Data Science",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 44,
+    "Categorie_Id": 11,
+    "Categorie": "AL/ML  ",
+    "Course_Id": 2,
+    "Course": "Computer Vision",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 45,
+    "Categorie_Id": 11,
+    "Categorie": "AL/ML  ",
+    "Course_Id": 3,
+    "Course": "Natural Language Processing",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 46,
+    "Categorie_Id": 11,
+    "Categorie": "AL/ML  ",
+    "Course_Id": 4,
+    "Course": "Reinforcement  learning ",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  },
+  {
+    "Primary_Index": 47,
+    "Categorie_Id": 11,
+    "Categorie": "AL/ML  ",
+    "Course_Id": 5,
+    "Course": "Speech Recognition ",
+    "Section_Id": 1,
+    "Section": "WorkINProgress"
+  }
+]

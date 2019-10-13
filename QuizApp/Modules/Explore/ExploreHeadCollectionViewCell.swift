@@ -37,12 +37,14 @@ class ExploreHeadCollectionViewCell: UICollectionViewCell {
         if cellTitleLabel == nil {
             cellTitleLabel = UILabel()
             cellTitleLabel?.translatesAutoresizingMaskIntoConstraints = false
+            cellTitleLabel?.numberOfLines = 0
             cellTitleLabel?.textColor = UIColor.white
         }
         contentView.addSubview(cellTitleLabel!)
         
         cellTitleLabel?.setCenterYAnchor()
         cellTitleLabel?.setLeftAnchor(offset: 10)
+        cellTitleLabel?.setRightAnchor(offset: -10)
     }
     
     public func updateCellView(cellColor: UIColor, cellTitle: String) {

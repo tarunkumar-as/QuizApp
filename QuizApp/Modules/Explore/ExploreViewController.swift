@@ -14,12 +14,18 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         let model = CoursesModel()
         return model
     }()
+    private lazy var questionsModel: QuestionsModel = {
+        let model = QuestionsModel()
+        return model
+    }()
     private var tableView: UITableView?
     private lazy var questionViewController: QuestionViewController = {
         let viewController = QuestionViewController()
         return viewController
     }()
     
+    private var mainCategoriesList: [String] = []
+    private var coursesContent: [[String : Any]] = []
     private var questionsContent: [[String : Any]] = []
     
     //MARK: ViewController Related Methods
@@ -70,7 +76,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return mainCategoriesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,6 +85,14 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
             tableViewCell = ExploreTableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "ExploreTableViewCell")
         }
         tableViewCell?.delegate = self
+        
+        let colorIndex: Int = indexPath.row % AppConstants.CATEGORY_COLOR_LIST.count
+        let sectionTitle = mainCategoriesList[indexPath.row]
+        
+        let coursesList = coursesContent.filter { (obj) -> Bool in
+            obj[AppConstants.Questions_Response_Key.CATEGORIE.rawValue] as! String == sectionTitle
+        }
+        tableViewCell?.populateDate(sectionColor: AppConstants.CATEGORY_COLOR_LIST[colorIndex], sectionTitle: mainCategoriesList[indexPath.row], sectionData: coursesList)
         return tableViewCell!
     }
     
@@ -93,6 +107,8 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     //MARK: Model Related Methods
     
     private func fetchDataFromModel() {
-        questionsContent = coursesModel.getCoursesList()
+        coursesContent = coursesModel.getCoursesList()
+        questionsContent = questionsModel.getQuestionsList()
+        mainCategoriesList = coursesModel.getMainCategoriesList()
     }
 }

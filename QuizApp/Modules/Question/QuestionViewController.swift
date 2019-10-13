@@ -16,7 +16,9 @@ class QuestionViewController: UIViewController {
     private var statusView: UIView?
     private var completedView: UIView?
     private var mainQuestion: UILabel?
-    private var answerView: OptionsView?
+    private var hintLabel: UILabel?
+    private var hintButton: UIButton?
+    private var answerView: AnswersView?
     private var submitButton: UIButton?
     
     private var questionsDict: [[String : Any]] = []
@@ -58,6 +60,7 @@ class QuestionViewController: UIViewController {
         addScrollView()
         addStatusView()
         addQuestionsLabel()
+        addHintView()
         addOptionsView()
         addSubmitButton()
     }
@@ -77,7 +80,7 @@ class QuestionViewController: UIViewController {
             scrollView?.addSubview(scrollViewContentView!)
             scrollViewContentView?.setDimensionEqualContainerView()
             scrollViewContentView?.setHeight(height: view.bounds.size.height - 50)
-            scrollViewContentView?.setWidth(height: view.bounds.size.width)
+            scrollViewContentView?.setWidth(width: view.bounds.size.width)
         }
     }
     
@@ -120,9 +123,60 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    private func addHintView() {
+        addHintButton()
+        addHintLabel()
+    }
+    
+    private func addHintButton() {
+        if hintButton == nil {
+            hintButton = UIButton(type: UIButton.ButtonType.custom)
+            hintButton?.addTarget(self, action: #selector(self.hintButtonPressed), for: UIControl.Event.touchUpInside)
+            hintButton?.translatesAutoresizingMaskIntoConstraints = false
+            scrollViewContentView?.addSubview(hintButton!)
+        }
+        let hintImage = UIImageView(image: UIImage(named: "Hint.png"))
+        hintImage.translatesAutoresizingMaskIntoConstraints = false
+        hintImage.contentMode = UIView.ContentMode.scaleAspectFit
+        hintButton?.addSubview(hintImage)
+        
+        let hintButtonLabel = UILabel()
+        hintButtonLabel.translatesAutoresizingMaskIntoConstraints = false
+        hintButtonLabel.text = "Hint"
+        hintButtonLabel.textColor = UIColor.lightGray
+        hintButton?.addSubview(hintButtonLabel)
+        
+        hintImage.setCenterYAnchor()
+        hintImage.setWidth(width: 25)
+        hintImage.setHeight(height: 25)
+        hintImage.setLeftAnchor(offset: 0)
+        
+        hintButtonLabel.setCenterYAnchor()
+        hintButtonLabel.setRightAnchor(offset: -5)
+        hintButtonLabel.setLeftAnchorRelativeTo(anchor: hintImage.rightAnchor, offset: 7)
+        
+        hintButton?.setTopAnchorRelativeTo(anchor: (mainQuestion?.bottomAnchor)!, offset: 25)
+        hintButton?.setHeight(height: 45)
+        hintButton?.setLeftAnchor(offset: 10)
+    }
+    
+    private func addHintLabel() {
+        if hintLabel == nil {
+            hintLabel = UILabel()
+            hintLabel?.translatesAutoresizingMaskIntoConstraints = false
+            hintLabel?.text = ""
+            hintLabel?.textColor = UIColor.gray
+            hintLabel?.numberOfLines = 0
+            scrollViewContentView?.addSubview(hintLabel!)
+        }
+        hintLabel?.setLeftAnchor(offset: 10)
+        hintLabel?.setRightAnchor(offset: -10)
+        hintLabel?.setTopAnchorRelativeTo(anchor: (hintButton?.bottomAnchor)!, offset: 10)
+    }
+    
     private func addOptionsView() {
         if answerView == nil {
-            answerView = OptionsView(frame: CGRect.zero)
+            answerView = AnswersView(frame: CGRect.zero)
             answerView?.translatesAutoresizingMaskIntoConstraints = false
             scrollViewContentView?.addSubview(answerView!)
             answerView?.setLeftAnchor()
@@ -158,6 +212,11 @@ class QuestionViewController: UIViewController {
         navigationController?.pushViewController(questionViewController, animated: true)
     }
     
+    @objc private func hintButtonPressed() {
+        hintLabel?.text = currentQuestion[AppConstants.Questions_Response_Key.SHORT_DESCRIPTION.rawValue] as? String
+        hintButton?.isUserInteractionEnabled = false
+    }
+    
     private func removeScrollView() {
         scrollViewContentView?.removeFromSuperview()
         scrollViewContentView = nil
@@ -173,11 +232,11 @@ class QuestionViewController: UIViewController {
     }
     
     private func updateViewsWithQuestionData() {
-        mainQuestion?.text = currentQuestion[AppConstants.Response_Type.QUESTION.rawValue] as? String
-        let solution1 = currentQuestion[AppConstants.Response_Type.OPTION_1.rawValue] as! String
-        let solution2 = currentQuestion[AppConstants.Response_Type.OPTION_2.rawValue] as! String
-        let solution3 = currentQuestion[AppConstants.Response_Type.OPTION_3.rawValue] as! String
-        let solution4 = currentQuestion[AppConstants.Response_Type.OPTION_4.rawValue] as! String
+        mainQuestion?.text = "Q\(questionNumber + 1)) \(currentQuestion[AppConstants.Questions_Response_Key.QUESTION.rawValue] as! String)" 
+        let solution1 = currentQuestion[AppConstants.Questions_Response_Key.OPTION_1.rawValue] as! String
+        let solution2 = currentQuestion[AppConstants.Questions_Response_Key.OPTION_2.rawValue] as! String
+        let solution3 = currentQuestion[AppConstants.Questions_Response_Key.OPTION_3.rawValue] as! String
+        let solution4 = currentQuestion[AppConstants.Questions_Response_Key.OPTION_4.rawValue] as! String
         answerView?.setViewValues(solutionStrings: [solution1,solution2,solution3,solution4])
     }
     

@@ -145,8 +145,8 @@ extension UIView {
     
     //MARK: WidthAnchor
     
-    func setWidth(height: CGFloat) {
-        self.widthAnchor.constraint(equalToConstant: height).isActive = true
+    func setWidth(width: CGFloat) {
+        self.widthAnchor.constraint(equalToConstant: width).isActive = true
     }
     
     func setRelativeWidth(multiplier: CGFloat) {
