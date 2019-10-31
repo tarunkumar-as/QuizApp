@@ -44,6 +44,7 @@ class ExploreTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         self.sectionColor = sectionColor
         self.sectionData = sectionData
         collectionView?.reloadData()
+        collectionView?.contentOffset = CGPoint(x: 0, y: 0)
     }
     
     private func addCellViews() {

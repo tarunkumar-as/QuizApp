@@ -100,7 +100,12 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func courseSelected(index: Int) {
         questionViewController.hidesBottomBarWhenPushed = true
-        questionViewController.setQuestionsData(questionNumber: 0, questionsSet: questionsContent)
+        let filteredArray = questionsContent.filter { (dict) -> Bool in
+            return (dict[AppConstants.Questions_Response_Key.CATEGORIE_ID.rawValue] as! Int == 1) &&
+                    (dict[AppConstants.Questions_Response_Key.SECTION_ID.rawValue] as! Int == 1) &&
+                    (dict[AppConstants.Questions_Response_Key.SECTION.rawValue] as! String != "WorkINProgress")
+        }
+        questionViewController.setQuestionsData(questionNumber: 0, questionsSet: filteredArray)
         navigationController?.pushViewController(questionViewController, animated: true)
     }
     

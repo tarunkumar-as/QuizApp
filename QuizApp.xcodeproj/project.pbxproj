@@ -28,6 +28,7 @@
 		8D2DD396232375BE00A3F866 /* GlobalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DD395232375BE00A3F866 /* GlobalUtils.swift */; };
 		8D2DD39823237C9400A3F866 /* UIViewConstraintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DD39723237C9400A3F866 /* UIViewConstraintManager.swift */; };
 		8D2DD39A2323874D00A3F866 /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2DD3992323874D00A3F866 /* ExploreTableViewCell.swift */; };
+		8D6B0BEC235B7B18002F66CC /* SolutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6B0BEB235B7B18002F66CC /* SolutionViewController.swift */; };
 		8D7932BA234C5903008B3050 /* QuestionDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D7932B8234C5903008B3050 /* QuestionDictionary.json */; };
 		8D7932BB234C5903008B3050 /* Main_Page.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D7932B9234C5903008B3050 /* Main_Page.json */; };
 		8D8213122352970000682903 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8213112352970000682903 /* QuestionModel.swift */; };
@@ -35,7 +36,6 @@
 		8DA3F59C2336CAFA004CBF3A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3F59B2336CAFA004CBF3A /* AppConstants.swift */; };
 		8DA3F59F2336DD51004CBF3A /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DA3F59E2336DD50004CBF3A /* Questions.json */; };
 		8DA3F5A623370923004CBF3A /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3F5A523370923004CBF3A /* CoursesModel.swift */; };
-		8DA3F5AC23370E9B004CBF3A /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3F5AB23370E9B004CBF3A /* FileReader.swift */; };
 		8DA7B550233095830016D995 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7B54F233095830016D995 /* QuestionViewController.swift */; };
 		8DA7B5532330A0050016D995 /* AnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7B5522330A0050016D995 /* AnswersView.swift */; };
 		8DAC41B923260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAC41B823260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift */; };
@@ -65,6 +65,7 @@
 		8D2DD395232375BE00A3F866 /* GlobalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUtils.swift; sourceTree = "<group>"; };
 		8D2DD39723237C9400A3F866 /* UIViewConstraintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintManager.swift; sourceTree = "<group>"; };
 		8D2DD3992323874D00A3F866 /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
+		8D6B0BEB235B7B18002F66CC /* SolutionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionViewController.swift; sourceTree = "<group>"; };
 		8D7932B8234C5903008B3050 /* QuestionDictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuestionDictionary.json; sourceTree = "<group>"; };
 		8D7932B9234C5903008B3050 /* Main_Page.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Main_Page.json; sourceTree = "<group>"; };
 		8D8213112352970000682903 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		8DA3F59B2336CAFA004CBF3A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		8DA3F59E2336DD50004CBF3A /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
 		8DA3F5A523370923004CBF3A /* CoursesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesModel.swift; sourceTree = "<group>"; };
-		8DA3F5AB23370E9B004CBF3A /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		8DA7B54F233095830016D995 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		8DA7B5522330A0050016D995 /* AnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersView.swift; sourceTree = "<group>"; };
 		8DAC41B823260F4F0021DAAF /* ExploreHeadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreHeadCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 				8D2DD34D2321B9CF00A3F866 /* Assets.xcassets */,
 				8D2DD34F2321B9CF00A3F866 /* LaunchScreen.storyboard */,
 				8D2DD3522321B9CF00A3F866 /* Info.plist */,
-				8DA3F5AB23370E9B004CBF3A /* FileReader.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -144,6 +143,7 @@
 				8D2DD3692321E92E00A3F866 /* Profile */,
 				8D2DD36C2321E94200A3F866 /* Recomended */,
 				8DA7B55123309FEE0016D995 /* Question */,
+				8D6B0BED235B7B1F002F66CC /* Solution */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -243,6 +243,14 @@
 				8D2DD3922323712F00A3F866 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		8D6B0BED235B7B1F002F66CC /* Solution */ = {
+			isa = PBXGroup;
+			children = (
+				8D6B0BEB235B7B18002F66CC /* SolutionViewController.swift */,
+			);
+			path = Solution;
 			sourceTree = "<group>";
 		};
 		8DA3F59D2336CB08004CBF3A /* App Constants */ = {
@@ -360,6 +368,7 @@
 				8DA7B550233095830016D995 /* QuestionViewController.swift in Sources */,
 				8DA3F5A623370923004CBF3A /* CoursesModel.swift in Sources */,
 				8D2DD37E23230E2B00A3F866 /* ThemeManager.swift in Sources */,
+				8D6B0BEC235B7B18002F66CC /* SolutionViewController.swift in Sources */,
 				8DA3F59C2336CAFA004CBF3A /* AppConstants.swift in Sources */,
 				8D2DD39A2323874D00A3F866 /* ExploreTableViewCell.swift in Sources */,
 				8D2DD3612321E8E100A3F866 /* LearnViewController.swift in Sources */,
@@ -375,7 +384,6 @@
 				8D2DD35D2321E8C000A3F866 /* ExploreViewController.swift in Sources */,
 				8D2DD3652321E8F400A3F866 /* RecommendedViewController.swift in Sources */,
 				8D2DD39823237C9400A3F866 /* UIViewConstraintManager.swift in Sources */,
-				8DA3F5AC23370E9B004CBF3A /* FileReader.swift in Sources */,
 				8D2DD38E2323178A00A3F866 /* UserDefaults.swift in Sources */,
 				8D2DD396232375BE00A3F866 /* GlobalUtils.swift in Sources */,
 				8DA7B5532330A0050016D995 /* AnswersView.swift in Sources */,

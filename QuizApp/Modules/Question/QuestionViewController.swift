@@ -31,6 +31,11 @@ class QuestionViewController: UIViewController {
         return viewController
     }()
     
+    private lazy var solutionViewController: SolutionViewController = {
+        let viewController = SolutionViewController()
+        return viewController
+    }()
+    
     //MARK: ViewController Methods
     
     override func viewDidLoad() {
@@ -205,11 +210,14 @@ class QuestionViewController: UIViewController {
     
     @objc private func submitButtonPressed() {
         if questionNumber == questionsSet.count - 1 {
-            return
+            solutionViewController.setQuestionsData(questionsSet: questionsSet)
+            navigationController?.pushViewController(solutionViewController, animated: true)
         }
-        questionViewController.hidesBottomBarWhenPushed = true
-        questionViewController.setQuestionsData(questionNumber: questionNumber + 1, questionsSet: questionsSet)
-        navigationController?.pushViewController(questionViewController, animated: true)
+        else {
+            questionViewController.hidesBottomBarWhenPushed = true
+            questionViewController.setQuestionsData(questionNumber: questionNumber + 1, questionsSet: questionsSet)
+            navigationController?.pushViewController(questionViewController, animated: true)
+        }
     }
     
     @objc private func hintButtonPressed() {
@@ -233,10 +241,10 @@ class QuestionViewController: UIViewController {
     
     private func updateViewsWithQuestionData() {
         mainQuestion?.text = "Q\(questionNumber + 1)) \(currentQuestion[AppConstants.Questions_Response_Key.QUESTION.rawValue] as! String)" 
-        let solution1 = currentQuestion[AppConstants.Questions_Response_Key.OPTION_1.rawValue] as! String
-        let solution2 = currentQuestion[AppConstants.Questions_Response_Key.OPTION_2.rawValue] as! String
-        let solution3 = currentQuestion[AppConstants.Questions_Response_Key.OPTION_3.rawValue] as! String
-        let solution4 = currentQuestion[AppConstants.Questions_Response_Key.OPTION_4.rawValue] as! String
+        let solution1 = String(describing: currentQuestion[AppConstants.Questions_Response_Key.OPTION_1.rawValue]!)
+        let solution2 = String(describing: currentQuestion[AppConstants.Questions_Response_Key.OPTION_2.rawValue]!)
+        let solution3 = String(describing: currentQuestion[AppConstants.Questions_Response_Key.OPTION_3.rawValue]!)
+        let solution4 = String(describing: currentQuestion[AppConstants.Questions_Response_Key.OPTION_4.rawValue]!)
         answerView?.setViewValues(solutionStrings: [solution1,solution2,solution3,solution4])
     }
     
